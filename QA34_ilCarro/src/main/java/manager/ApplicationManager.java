@@ -13,6 +13,7 @@ public class ApplicationManager {
 
     WebDriver wd;
     HelperUser helperUser;
+    HelperCar car;
 
     public void init(){
 
@@ -22,6 +23,7 @@ public class ApplicationManager {
         wd.navigate().to("https://ilcarro-1578153671498.web.app/search");
         helperUser=new HelperUser(wd);
 
+        car= new HelperCar(wd);
     }
 
     public void stop(){
@@ -34,5 +36,7 @@ public class ApplicationManager {
         return helperUser;
     }
 
-
+    public HelperCar car() {
+        return car;
+    }
 }
