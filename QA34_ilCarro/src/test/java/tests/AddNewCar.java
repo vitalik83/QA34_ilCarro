@@ -49,7 +49,7 @@ public class AddNewCar extends TestBase {
 
         app.car().openCarForm();
         app.car().fillCarForm(car);
-        app.car().attachPhoto("C:\\Users\\vitalik\\Qa_34\\QA34_ilCarro\\QA34_ilCarro\\auto1.jpeg");
+        app.car().attachPhoto("QA34_ilCarro/src/test/screenshots/screen-1.png");
         app.car().submit();
         Assert.assertEquals(app.car().getMessage(),"Car added");
     }

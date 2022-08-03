@@ -10,6 +10,8 @@
 
     <timestamp key="bySecond" datePattern="yyMMdd'QA34'HHmmss"/>
 
+
+
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>Logs/log-${bySecond}.log</file>
         <append>true</append>

@@ -14,17 +14,17 @@ public class HelperSearch extends HelperBase{
     }
 
     private void selectPeriodCurrentMonth(String dataFrom, String dataTo) {
-        //     "7/25/2022"      "7/30/2022"
+        //   8/3/2022","8/25/2022
         click(By.id("dates"));
 
-        String [] from = dataFrom.split("/"); // ["7"],["25"],["2022"  from[1] = "25"
+        String [] from = dataFrom.split("/"); // ["8"],["3"],["2022"  from[1] = "25"
 
         String locator  = "//div[text()=' "+from[1]+" ']";
         click(By.xpath(locator));
 
 
         //     "7/30/2022"
-        String [] to = dataTo.split("/"); // ["7"],["30"],["2022"]     to[1]
+        String [] to = dataTo.split("/"); // ["8"],["25"],["2022"]     to[1]
 
         String locator2 = String.format("//div[text()=' %s ']",to[1]);
 
@@ -45,6 +45,17 @@ public class HelperSearch extends HelperBase{
     }
 
     private void selectPeriodCurrentYear(String dataFrom, String dataTo) {
-        String now ="7/17/2022";
+        //"8/10/2022","10/20/2022"
+
+        String dataNow ="7/20/2022";
+        String[]now = dataNow.split("/");
+        String[] from = dataFrom.split("/");
+        String[] to = dataTo.split("/");
+        click(By.id("dates"));
+
+        if(!now[0].equals(from[0])){
+            
+        }
+
     }
 }

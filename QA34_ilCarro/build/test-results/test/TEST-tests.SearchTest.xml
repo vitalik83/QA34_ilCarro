@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.SearchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-03T16:28:53" hostname="LAPTOP-IBOJBCN6" time="3.45">
+  <properties/>
+  <testcase name="searchCurrentMonth" classname="tests.SearchTest" time="3.45"/>
+  <system-out><![CDATA[19:28:53.579  INFO  tests.TestBase - Start test with name --->searchCurrentMonth
+19:28:53.583  INFO  manager.MyListener - WebDriver start find element -->By.id: city
+19:28:54.128  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: .pac-item
+19:28:55.228  INFO  manager.MyListener - WebDriver start find element -->By.id: dates
+19:28:56.210  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //div[text()=' 5 ']
+19:28:56.472  INFO  manager.MyListener - WebDriver start find element -->By.xpath: //div[text()=' 21 ']
+19:28:56.657  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
+19:28:56.828  INFO  manager.MyListener - WebDriver start find element -->By.cssSelector: button[type='submit']
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
