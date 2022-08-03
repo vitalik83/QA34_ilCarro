@@ -11,12 +11,14 @@ public class RegistrationTests extends TestBase{
 
     @BeforeMethod
     public void preCondition(){
-        // if logged ---> true -logout
-        if(app.getHelperUser().isLogged()){
-            app.getHelperUser().logout();
 
+        if(app.getHelperUser().isLogged()){
+
+            app.getHelperUser().logout();
         }
     }
+
+
 
     @Test
     public void registrationSuccess(){
@@ -25,8 +27,8 @@ public class RegistrationTests extends TestBase{
 
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
-        app.getHelperUser().checkPolicyXY();
-        app.getHelperUser().submit();///?
+        app.getHelperUser().checkPolicy();
+        app.getHelperUser().submit();
         Assert.assertEquals(app.getHelperUser().getMessage(),"Registered");
 
 
@@ -44,10 +46,12 @@ public class RegistrationTests extends TestBase{
 
 
     }
+
+
     @Test
-    public  void registrationWrongPasswordFormatSize(){
+    public void registrationWrongPasswordFormatSize(){
         User user = new User()
-                .setLastName("Zoa")
+                .setName("Zoa")
                 .setLastName("DSnow")
                 .setEmail("zoa@gmail.com")
                 .setPassword("Zoa");
@@ -56,12 +60,16 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().checkPolicy();
         Assert.assertTrue(app.getHelperUser().isErrorPasswordFormatDisplayed());
         Assert.assertTrue(app.getHelperUser().isErrorPasswordSizeDisplayed());
-        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+        Assert.assertTrue(app.getHelperUser().isYallaButtoNotActive());
+
+
+
 
     }
     @AfterMethod
-    public void  postCondition(){
+    public void postCondition(){
         app.getHelperUser().clickOk();
+
 
     }
 }
